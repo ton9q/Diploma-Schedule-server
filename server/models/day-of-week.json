@@ -1,0 +1,24 @@
+{
+  "name": "DayOfWeek",
+  "plural": "DaysOfWeek",
+  "base": "PersistedModel",
+  "strict": true,
+  "forceId": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "relations": {
+    "nestedSubjects": {
+      "type": "embedsMany",
+      "model": "Subject",
+      "property": "subjects"
+    }
+  },
+  "properties": {
+    "numberDayOfWeek": {
+      "type": "number",
+      "required": true,
+      "description": ""
+    }
+  }
+}

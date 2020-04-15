@@ -1,0 +1,14 @@
+{
+    "cSpell.words": [
+        "usemarker"
+    ],
+    // "eslint.enable": true,
+    // "editor.formatOnSave": true,
+    "eslint.validate": [
+        "js",
+        "json"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+}

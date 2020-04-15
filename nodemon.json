@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "common",
+    "server"
+  ],
+  "ignore": [
+    "server/populate-db"
+  ]
+}

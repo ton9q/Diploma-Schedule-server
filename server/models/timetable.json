@@ -1,0 +1,52 @@
+{
+  "name": "Timetable",
+  "base": "PersistedModel",
+  "strict": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "UserAndTimeStamp": true
+  },
+  "relations": {
+    "group": {
+      "type": "belongsTo",
+      "model": "Group",
+      "foreignKey": "groupId"
+    },
+    "nestedDaysOfWeek": {
+      "type": "embedsMany",
+      "model": "DayOfWeek",
+      "property": "daysOfWeek"
+    }
+  },
+  "properties": {
+    "semesterNumber": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "acls": [
+    {
+      "permission": "DENY",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "*",
+      "property": "*"
+    },
+    {
+      "permission": "ALLOW",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "READ",
+      "property": "*"
+    },
+    {
+      "permission": "ALLOW",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "accessType": "*",
+      "property": "*"
+    }
+  ]
+}

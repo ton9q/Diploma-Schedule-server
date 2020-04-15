@@ -1,0 +1,48 @@
+{
+  "name": "Subject",
+  "base": "PersistedModel",
+  "strict": true,
+  "forceId": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "relations": {
+    "teacher": {
+      "type": "belongsTo",
+      "model": "Teacher",
+      "foreignKey": "teacherId"
+    }
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "cabinet": {
+      "type": "string",
+      "required": true
+    },
+    "buildingNumber": {
+      "type": "string",
+      "required": true
+    },
+    "weekNumber": {
+      "type": "number"
+    },
+    "lessonStart": {
+      "type": "string",
+      "required": true
+    },
+    "lessonEnd": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date",
+      "description": "Date of the lesson (exam, consultation) on the subject"
+    }
+  }
+}

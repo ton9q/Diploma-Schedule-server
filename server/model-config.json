@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins",
+      "../node_modules/loopback-objectid-mixin"
+    ]
+  },
+  "accessToken": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongodb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "user": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "University": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Group": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Teacher": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Subject": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "DayOfWeek": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "Timetable": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}

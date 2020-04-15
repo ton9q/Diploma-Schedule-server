@@ -1,0 +1,50 @@
+{
+  "name": "Teacher",
+  "base": "PersistedModel",
+  "strict": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "UserAndTimeStamp": true
+  },
+  "properties": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "photoLink": {
+      "type": "string"
+    }
+  },
+  "acls": [
+    {
+      "permission": "DENY",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "*",
+      "property": "*"
+    },
+    {
+      "permission": "ALLOW",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "READ",
+      "property": "*"
+    },
+    {
+      "permission": "ALLOW",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "accessType": "*",
+      "property": "*"
+    }
+  ]
+}

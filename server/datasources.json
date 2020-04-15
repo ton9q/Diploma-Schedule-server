@@ -1,0 +1,9 @@
+{
+  "mongodb": {
+    "url": "${DB_URL}",
+    "name": "mongodb",
+    "connector": "mongodb",
+    "useNewUrlParser": true,
+    "allowExtendedOperators": true
+  }
+}
