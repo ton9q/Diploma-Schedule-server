@@ -1,14 +1,14 @@
 module.exports = {
   faculties: [
     {
-      name: 'FITR',
+      name: 'ФИТР',
       specialties: [
         {
-          name: 'POIT',
+          name: 'ПОИТ',
           numberSemesters: 8,
         },
         {
-          name: 'ISIT',
+          name: 'ИСИТ',
           numberSemesters: 8,
         },
       ],

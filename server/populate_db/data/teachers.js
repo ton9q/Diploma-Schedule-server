@@ -1,0 +1,148 @@
+module.exports = [
+  {
+    fullName: 'Полозков Юрий Владимирович',
+    faculty: 'ФИТР',
+    position: 'Заведующий кафедрой; кандидат технических наук, доцент',
+    email: 'YuVPolozkov@bntu.by',
+  },
+  {
+    fullName: 'Прихожий Анатолий Алексеевич',
+    faculty: 'ФИТР',
+    position: 'Профессор, доктор технических наук',
+    email: 'prihozhy@bntu.by',
+  },
+  {
+    fullName: 'Бородуля Алексей Валентинович',
+    faculty: 'ФИТР',
+    position: 'Кандидат технических наук, доцент',
+    email: 'AVBorodulya@bntu.by',
+  },
+  {
+    fullName: 'Гурский Николай Николаевич',
+    faculty: 'ФИТР',
+    position: 'Кандидат технических наук, доцент',
+    email: 'ngursky@bntu.by',
+  },
+
+  {
+    fullName: 'Ковалева Ирина Львовна',
+    faculty: 'ФИТР',
+    position: 'Кандидат технических наук, доцент',
+    email: 'ilkovaleva@bntu.by',
+  },
+  {
+    fullName: 'Крук Юлия Сигизмундовна',
+    faculty: 'ФИТР',
+    position: 'Кандидат физико-математических наук, доцент',
+  },
+  {
+    fullName: 'Кункевич Дмитрий Петрович',
+    faculty: 'ФИТР',
+    position: 'Кандидат технических наук, доцент',
+    email: 'kunkevich@bntu.by',
+  },
+  {
+    fullName: 'Куприянов Андрей Борисович',
+    faculty: 'ФИТР',
+    position: 'Кандидат технических наук, доцент',
+    email: 'abkupriyanov@bntu.by',
+  },
+  {
+    fullName: 'Напрасников Владимир Владимирович',
+    faculty: 'ФИТР',
+    position: 'Кандидат технических наук, доцент',
+    email: 'naprasnikov@bntu.by',
+  },
+  {
+    fullName: 'Попова Юлия Борисовна',
+    faculty: 'ФИТР',
+    position: 'Кандидат технических наук, доцент',
+    email: 'jpopova@bntu.by',
+  },
+  {
+    fullName: 'Разоренов Николай Александрович',
+    faculty: 'ФИТР',
+    position: 'Кандидат технических наук, доцент',
+    email: 'nrazorenov@bntu.by',
+  },
+  {
+    fullName: 'Сидорик Валерий Владимирович',
+    faculty: 'ФИТР',
+    position: 'Кандидат физико-математических наук, доцент',
+    email: 'vvsidorik@bntu.by',
+  },
+  {
+    fullName: 'Юденков Виктор Степанович ',
+    faculty: 'ФИТР',
+    position: 'Кандидат технических наук, доцент',
+    email: 'vsjudenkov@bntu.by',
+  },
+  {
+    fullName: 'Борисова Ирина Михайловна',
+    faculty: 'ФИТР',
+    position: 'Старший преподаватель',
+    email: 'imborisova@bntu.by',
+  },
+  {
+    fullName: 'Белова Светлана Владимировна',
+    faculty: 'ФИТР',
+    position: 'Старший преподаватель',
+    email: 'belova@bntu.by',
+  },
+  {
+    fullName: 'Иванченко Виктор Викторович',
+    faculty: 'ФИТР',
+    position: 'Старший преподаватель',
+    email: 'ivanvikvik@bntu.by·',
+  },
+  {
+    fullName: 'Прибыльская Наталья Михайловна',
+    faculty: 'ФИТР',
+    position: 'Старший преподаватель',
+  },
+  {
+    fullName: 'Носкова Людмила Адамовна',
+    faculty: 'ФИТР',
+    position: 'Старший преподаватель',
+    email: 'LANoskova@bntu.by',
+  },
+  {
+    fullName: 'Шваякова Елена Александровна',
+    faculty: 'ФИТР',
+    position: 'Старший преподаватель',
+    email: 'EAShvayakova@bntu.by',
+  },
+  {
+    fullName: 'Барышев Артём Александрович',
+    faculty: 'ФИТР',
+    position: 'Старший преподаватель',
+    email: 'aabaryshev@bntu.by',
+  },
+  {
+    fullName: 'Хвитько Евгений Анатольевич',
+    faculty: 'ФИТР',
+    position: 'Преподаватель',
+    email: 'evgeni.hvitko@bntu.by',
+  },
+  {
+    fullName: 'Комина Наталья Васильевна',
+    faculty: 'МСФ',
+    position: 'Старший преподаватель',
+    email: 'komina@bntu.by',
+  },
+  {
+    fullName: 'Голуб Юлия Игоревна',
+    faculty: 'ФИТР',
+    position: 'Старший преподаватель',
+  },
+  {
+    fullName: 'Длусская А. Ю.',
+    faculty: 'ФИТР',
+    position: 'Преподаватель',
+  },
+  {
+    fullName: 'Шконда Н.А.',
+    faculty: 'ФИТР',
+    position: 'Преподаватель',
+  },
+];

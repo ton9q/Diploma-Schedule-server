@@ -45,20 +45,18 @@ exports.getUserId = async (...params) => {
 
 exports.merge = (object, { createdBy, updatedBy, ...overrides } = {}) => {
   const result = { ...object };
+  const dateNow = new Date();
 
   if (createdBy) {
     result.createdBy = createdBy;
-    result.createdAt = faker.date.past();
+    result.createdAt = dateNow;
     result.updatedBy = createdBy;
-    result.updatedAt = faker.date.between(
-      result.createdAt,
-      faker.date.past(),
-    );
+    result.updatedAt = dateNow;
   }
 
   if (updatedBy) {
     result.updatedBy = updatedBy;
-    result.updatedAt = faker.date.past();
+    result.updatedAt = dateNow;
   }
 
   Object.assign(result, overrides);

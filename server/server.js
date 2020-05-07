@@ -3,20 +3,12 @@ const loopback = require('loopback');
 const boot = require('loopback-boot');
 const compression = require('compression');
 const logger = require('./logger')(module);
+const logUncaughtErrors = require('./log-uncaught-errors');
+
+logUncaughtErrors();
 
 const app = loopback();
 app.use(compression());
-
-process.on('uncaughtException', err => {
-  logger.error(`[Uncaught Exception] ${err.name}: ${err.message}`);
-  logger.info('Shutting down...');
-  process.exit(1);
-});
-
-process.on('unhandledRejection', reason => {
-  logger.error(`[Unhandled Rejection] ${reason}`);
-  process.exit(1);
-});
 
 app.start = () => {
   const host = app.get('host');
