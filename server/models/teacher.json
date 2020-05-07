@@ -13,9 +13,16 @@
       "type": "string",
       "required": true
     },
+    "faculty": {
+      "type": "string",
+      "required": true
+    },
     "position": {
       "type": "string",
       "required": true
+    },
+    "email": {
+      "type": "string"
     },
     "phoneNumber": {
       "type": "string"

@@ -7,7 +7,7 @@ module.exports = async () => {
     where: {
       isArchived: false,
     },
-    order: 'groupNumber ASC',
+    order: 'groupName ASC',
   });
 
   return groups;

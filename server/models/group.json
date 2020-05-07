@@ -9,7 +9,7 @@
     "UserAndTimeStamp": true
   },
   "properties": {
-    "groupNumber": {
+    "groupName": {
       "type": "string",
       "required": true
     },
@@ -17,7 +17,7 @@
       "type": "string",
       "required": true
     },
-    "specialties": {
+    "specialty": {
       "type": "string",
       "required": true
     },

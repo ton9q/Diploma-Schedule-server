@@ -1,7 +1,7 @@
 const filterFields = require('../../common/hooks/filter_fields');
 
 module.exports = filterFields([
-  'groupNumber',
+  'groupName',
   'faculty',
   'specialties',
   'numberSemesters',

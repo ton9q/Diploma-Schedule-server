@@ -1,4 +1,4 @@
 module.exports = {
-  1: 'First week',
-  2: 'Second week',
+  FIRST_WEEK: 'First week',
+  SECOND_WEEK: 'Second week',
 };

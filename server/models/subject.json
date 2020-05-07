@@ -6,6 +6,13 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "ObjectidType": {
+      "properties": [
+        "teacherId"
+      ]
+    }
+  },
   "relations": {
     "teacher": {
       "type": "belongsTo",
@@ -22,6 +29,10 @@
       "type": "string",
       "required": true
     },
+    "teacherId": {
+      "type": "any",
+      "required": true
+    },
     "cabinet": {
       "type": "string",
       "required": true
@@ -31,7 +42,10 @@
       "required": true
     },
     "weekNumber": {
-      "type": "number"
+      "type": "string"
+    },
+    "partOfGroup": {
+      "type": "string"
     },
     "lessonStart": {
       "type": "string",

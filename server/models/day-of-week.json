@@ -15,10 +15,9 @@
     }
   },
   "properties": {
-    "numberDayOfWeek": {
-      "type": "number",
-      "required": true,
-      "description": ""
+    "dayOfWeekName": {
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -6,7 +6,12 @@
     "validateUpsert": true
   },
   "mixins": {
-    "UserAndTimeStamp": true
+    "UserAndTimeStamp": true,
+    "ObjectidType": {
+      "properties": [
+        "groupId"
+      ]
+    }
   },
   "relations": {
     "group": {
