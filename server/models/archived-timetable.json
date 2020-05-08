@@ -1,0 +1,33 @@
+{
+  "name": "ArchivedTimetable",
+  "base": "Timetable",
+  "forceId": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "ObjectidType": {
+      "properties": [
+        "archivedBy"
+      ]
+    }
+  },
+  "relations": {
+    "archiver": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "archivedBy"
+    }
+  },
+  "properties": {
+    "archivedBy": {
+      "type": "any",
+      "required": true
+    },
+    "archivedAt": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "acls": []
+}

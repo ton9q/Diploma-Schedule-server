@@ -8,10 +8,10 @@ const {
 
 module.exports = Timetable => {
   disableRemoteMethods(Timetable, {
-    // except: [
-    //   'create',
-    //   'patchAttributes',
-    // ],
+    except: [
+      'create',
+      'patchAttributes',
+    ],
   });
 
   disableRelationRemoteMethods(Timetable, 'nestedDaysOfWeek');

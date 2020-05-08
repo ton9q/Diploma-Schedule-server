@@ -1,9 +1,9 @@
 const { ADMIN } = require('../../common/constants/user_roles');
 
-const isTimetableEditable = ({ userRoles }) => {
+const areArchivedTimetablesViewable = ({ userRoles }) => {
   return userRoles.includes(ADMIN);
 };
 
 module.exports = {
-  isTimetableEditable,
+  areArchivedTimetablesViewable,
 };

@@ -60,5 +60,9 @@
   "Timetable": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "ArchivedTimetable": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }
