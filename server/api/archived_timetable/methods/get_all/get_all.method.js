@@ -1,4 +1,5 @@
 const app = require('../../../../server');
+const { embedTeacherToTimetables } = require('../../../../services/embed_teacher.service');
 
 const DEFAULT_ORDER = 'createdAt DESC';
 
@@ -26,9 +27,10 @@ module.exports = async (group, page, pageSize) => {
 
   const archivedTimetableCount = await ArchivedTimetable.count(filter);
   const archivedTimetables = await ArchivedTimetable.find(filter);
+  const timetablesWithTeachersData = await embedTeacherToTimetables(archivedTimetables);
 
   return {
     timetableCount: archivedTimetableCount,
-    timetables: archivedTimetables,
+    timetables: timetablesWithTeachersData,
   };
 };

@@ -1,4 +1,4 @@
-const forEachSafe = require('../../../utils/for_each_safe');
+const { forEach } = require('lodash');
 
 module.exports = ({ timetable, Timetable }) => {
   const ObjectId = Timetable.getDataSource().ObjectID;
@@ -9,10 +9,10 @@ module.exports = ({ timetable, Timetable }) => {
     }
   };
 
-  forEachSafe(timetable.daysOfWeek, dayOfWeek => {
+  forEach(timetable.daysOfWeek, dayOfWeek => {
     setId(dayOfWeek);
 
-    forEachSafe(dayOfWeek.subjects, subject => {
+    forEach(dayOfWeek.subjects, subject => {
       setId(subject);
     });
   });
