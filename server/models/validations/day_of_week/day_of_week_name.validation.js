@@ -10,9 +10,6 @@ module.exports = (dayOfWeek, raise) => {
   }
 
   if (!DAY_OF_WEEK_NAMES.includes(dayOfWeekName)) {
-    raise(
-      `Invalid "dayOfWeekName" = "${dayOfWeekName}"; ` +
-      `allowed: ${arrayString(DAY_OF_WEEK_NAMES)}`
-    );
+    raise(`Invalid "dayOfWeekName" = "${dayOfWeekName}";  allowed: ${arrayString(DAY_OF_WEEK_NAMES)}`);
   }
 };

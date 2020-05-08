@@ -1,5 +1,5 @@
 const { find } = require('lodash');
-const { Forbidden } = require('http-errors');
+const { Unprocessable } = require('http-errors');
 const app = require('../../../server');
 
 module.exports = async context => {
@@ -13,7 +13,7 @@ module.exports = async context => {
 
   if (duplicatedGroup) {
     if (!id || (id && duplicatedGroup.id.toString() !== id)) {
-      throw new Forbidden('"groupName" for group should be uniq!');
+      throw new Unprocessable('"groupName" for group should be uniq!');
     }
   }
 };

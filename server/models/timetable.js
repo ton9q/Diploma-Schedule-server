@@ -1,9 +1,9 @@
-
 const {
   disableRemoteMethods,
   disableRelationRemoteMethods,
   initRemoteMethods,
   initOperationHooks,
+  initValidations,
 } = require('../utils/models');
 
 module.exports = Timetable => {
@@ -20,4 +20,6 @@ module.exports = Timetable => {
   initRemoteMethods(Timetable);
 
   initOperationHooks(Timetable);
+
+  initValidations(Timetable);
 };
