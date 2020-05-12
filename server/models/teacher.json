@@ -29,6 +29,10 @@
     },
     "photoLink": {
       "type": "string"
+    },
+    "isArchived": {
+      "type": "boolean",
+      "default": false
     }
   },
   "acls": [

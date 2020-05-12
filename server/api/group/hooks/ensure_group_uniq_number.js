@@ -1,5 +1,4 @@
-const { find } = require('lodash');
-const { Unprocessable } = require('http-errors');
+const { UnprocessableEntity } = require('http-errors');
 const app = require('../../../server');
 
 module.exports = async context => {
@@ -7,13 +6,16 @@ module.exports = async context => {
   const id = context.ctorArgs && context.ctorArgs.id;
   const { Group } = app.models;
 
-  const groups = await Group.getActive();
-
-  const duplicatedGroup = find(groups, { groupName });
+  const duplicatedGroup = await Group.findOne({
+    where: {
+      groupName,
+      isArchived: false,
+    },
+  });
 
   if (duplicatedGroup) {
     if (!id || (id && duplicatedGroup.id.toString() !== id)) {
-      throw new Unprocessable('"groupName" for group should be uniq!');
+      throw new UnprocessableEntity('"groupName" for group should be uniq!');
     }
   }
 };

@@ -1,4 +1,4 @@
-const { Unprocessable } = require('http-errors');
+const { UnprocessableEntity } = require('http-errors');
 const app = require('../../../server');
 
 module.exports = async context => {
@@ -9,15 +9,15 @@ module.exports = async context => {
 
   const existedFaculty = university.faculties.find(({ name }) => name === faculty);
   if (!existedFaculty) {
-    throw new Unprocessable(`"faculty" = "${faculty}" not founded in university`);
+    throw new UnprocessableEntity(`"faculty" = "${faculty}" not founded in university`);
   }
 
   const existedSpecialty = existedFaculty.specialties.find(({ name }) => name === specialty);
   if (!existedSpecialty) {
-    throw new Unprocessable(`"specialty" = "${specialty}" not founded on ${faculty} faculty in university`);
+    throw new UnprocessableEntity(`"specialty" = "${specialty}" not founded on ${faculty} faculty in university`);
   }
 
   if (existedSpecialty.numberSemesters !== numberSemesters) {
-    throw new Unprocessable(`Invalid "numberSemesters" for ${specialty} specialty`);
+    throw new UnprocessableEntity(`Invalid "numberSemesters" for ${specialty} specialty`);
   }
 };

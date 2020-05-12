@@ -1,4 +1,3 @@
-const { find } = require('lodash');
 const { Forbidden } = require('http-errors');
 const app = require('../../../server');
 
@@ -7,9 +6,12 @@ module.exports = async context => {
   const id = context.ctorArgs && context.ctorArgs.id;
   const { Teacher } = app.models;
 
-  const teachers = await Teacher.getActive();
-
-  const duplicatedTeacher = find(teachers, { fullName });
+  const duplicatedTeacher = await Teacher.findOne({
+    where: {
+      fullName,
+      isArchived: false,
+    },
+  });
 
   if (duplicatedTeacher) {
     if (!id || (id && duplicatedTeacher.id.toString() !== id)) {

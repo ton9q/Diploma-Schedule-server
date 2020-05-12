@@ -1,5 +1,5 @@
 const { uniq } = require('lodash');
-const { NotFound, Unprocessable } = require('http-errors');
+const { NotFound, UnprocessableEntity } = require('http-errors');
 const app = require('../../../server');
 
 module.exports = async context => {
@@ -12,7 +12,7 @@ module.exports = async context => {
   }
 
   if (semesterNumber > group.numberSemesters) {
-    throw new Unprocessable(`Invalid value of "semesterNumber"=${semesterNumber}`);
+    throw new UnprocessableEntity(`Invalid value of "semesterNumber"=${semesterNumber}`);
   }
 
   const teacherIds = [];
@@ -25,6 +25,6 @@ module.exports = async context => {
   const uniqTeacherIds = uniq(teacherIds);
   const teachers = await Teacher.find({ where: { id: { inq: uniqTeacherIds } } });
   if (uniqTeacherIds.length !== teachers.length) {
-    throw new Unprocessable('Subjects contain invalid some teacherId');
+    throw new UnprocessableEntity('Subjects contain invalid some teacherId');
   }
 };
