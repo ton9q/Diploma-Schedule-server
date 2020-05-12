@@ -3,7 +3,7 @@ const app = require('../../../../server');
 
 module.exports = async context => {
   const { Group } = app.models;
-  const { group: groupName } = context.args;
+  const { groupName } = context.args;
 
   const group = await Group.findOne({ where: { groupName, isArchived: false } });
 

@@ -1,17 +1,17 @@
 const app = require('../../../../server');
 const { embedTeacherToTimetables } = require('../../../../services/embed_teacher.service');
 
-module.exports = async (group, date) => {
-  const { Timetable } = app.models;
+module.exports = async (groupName, date) => {
+  const { Timetable, Group } = app.models;
+
+  const group = await Group.findOne({ where: { groupName, isArchived: false } });
 
   const timetables = await Timetable.find({
+    where: {
+      groupId: group.id,
+    },
     include: [
-      {
-        relation: 'group',
-        scope: {
-          where: { groupName: group },
-        },
-      },
+      'group',
     ],
   });
 

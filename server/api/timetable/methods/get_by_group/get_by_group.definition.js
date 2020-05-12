@@ -4,7 +4,7 @@ module.exports = {
     verb: 'get',
   },
   accepts: [{
-    arg: 'group',
+    arg: 'groupName',
     type: 'string',
     http: { source: 'query' },
     required: true,
