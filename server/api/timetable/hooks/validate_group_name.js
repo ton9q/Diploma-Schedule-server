@@ -1,5 +1,5 @@
 const { NotFound } = require('http-errors');
-const app = require('../../../../server');
+const app = require('../../../server');
 
 module.exports = async context => {
   const { Group } = app.models;

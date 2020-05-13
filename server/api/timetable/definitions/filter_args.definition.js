@@ -1,9 +1,5 @@
-module.exports = {
-  http: {
-    path: '/all',
-    verb: 'get',
-  },
-  accepts: [{
+module.exports = [
+  {
     arg: 'groupName',
     type: 'string',
     http: { source: 'query' },
@@ -14,10 +10,5 @@ module.exports = {
     type: 'date',
     http: { source: 'query' },
     description: 'Date for defining the semester for filtering timetables',
-  }],
-  returns: {
-    type: 'array',
-    root: true,
   },
-  description: 'Get all group timetables',
-};
+];
