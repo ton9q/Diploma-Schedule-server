@@ -3,6 +3,12 @@ module.exports = {
     path: '/active',
     verb: 'get',
   },
+  accepts: [{
+    arg: 'faculty',
+    type: 'string',
+    http: { source: 'query' },
+    description: 'Faculty name',
+  }],
   returns: {
     type: 'array',
     root: true,

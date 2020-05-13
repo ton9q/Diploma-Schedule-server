@@ -1,14 +1,20 @@
 const app = require('../../../../server');
+const { getRegExp } = require('../../../../utils/regexp');
 
-module.exports = async () => {
+module.exports = async faculty => {
   const { Teacher } = app.models;
 
-  const teachers = await Teacher.find({
+  const filter = {
     where: {
       isArchived: false,
     },
     order: 'fullName ASC',
-  });
+  };
 
-  return teachers;
+  if (faculty) {
+    const facultyRegex = getRegExp(faculty, { caseSensitive: false });
+    filter.where.faculty = facultyRegex;
+  }
+
+  return Teacher.find(filter);
 };
