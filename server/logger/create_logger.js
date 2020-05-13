@@ -1,7 +1,7 @@
 const { createLogger, format, transports } = require('winston');
 const formatLog = require('./format');
 const getModulePath = require('./get_module_path');
-const formatDate = require('../utils/format_date');
+// const formatDate = require('../utils/format_date');
 
 const getFormatConfig = ({ label, toFile = false } = {}) => {
   return format.combine(
