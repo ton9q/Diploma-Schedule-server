@@ -5,6 +5,7 @@ module.exports = {
   },
   groups: true,
   teachers: true,
+  teacherPhotos: true,
   timetables: true,
   university: true,
 };

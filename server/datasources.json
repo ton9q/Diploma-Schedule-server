@@ -5,5 +5,10 @@
     "connector": "mongodb",
     "useNewUrlParser": true,
     "allowExtendedOperators": true
+  },
+  "gridfs": {
+    "url": "${DB_URL}",
+    "name": "gridfs",
+    "connector": "loopback-component-storage-mongo"
   }
 }

@@ -8,6 +8,7 @@ require('../server');
 
 const config = require('./config');
 const {
+  addPhotosToTeachers,
   populateUsers,
   populateGroups,
   populateTeachers,
@@ -22,6 +23,7 @@ logger.info('generating data for DB...');
     users,
     groups,
     teachers,
+    teacherPhotos,
     timetables,
     university,
   } = config;
@@ -35,6 +37,9 @@ logger.info('generating data for DB...');
     }
     if (teachers) {
       await populateTeachers();
+    }
+    if (teacherPhotos) {
+      await addPhotosToTeachers();
     }
     if (university) {
       await populateUniversity();

@@ -27,8 +27,9 @@
     "phoneNumber": {
       "type": "string"
     },
-    "photoLink": {
-      "type": "string"
+    "photoId": {
+      "type": "any",
+      "description": "Photo id of file stored in file container"
     },
     "isArchived": {
       "type": "boolean",
