@@ -72,10 +72,7 @@
       "remoting": {
         "sharedMethods": {
           "*": false,
-          "upload": true,
-          "download": true,
-          "getContainers": true,
-          "getFiles": true
+          "upload": true
         }
       }
     }

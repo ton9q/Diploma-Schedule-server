@@ -4,6 +4,6 @@
     "server"
   ],
   "ignore": [
-    "server/populate-db"
+    "server/populate_db"
   ]
 }
