@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint . --ext .js,.json",
     "lint:fix": "npm run lint -- --fix",
-    "populate-db": "node server/populate_db/main",
+    "populate-db": "node server/populate_db/controllers/main",
+    "populate-db:teacher-photos": "node server/populate_db/controllers/teacher_photos",
     "start": "node .",
     "start:dev": "nodemon ."
   },
@@ -24,6 +25,7 @@
     "cors": "^2.5.2",
     "dotenv": "^8.2.0",
     "faker": "^4.1.0",
+    "form-data": "^3.0.0",
     "helmet": "^3.10.0",
     "http-errors": "^1.7.3",
     "lodash": "^4.17.15",
@@ -33,6 +35,7 @@
     "loopback-component-storage-mongo": "^1.5.1",
     "loopback-connector-mongodb": "^5.2.3",
     "loopback-objectid-mixin": "^1.0.1",
+    "node-fetch": "^2.6.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0",
     "winston": "^3.2.1"

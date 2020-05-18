@@ -1,20 +1,19 @@
 // script to populate DB with fake and initial data
 // to adjust settings use file ./config.js
 require('dotenv').config();
-const logger = require('../logger')(module);
+const logger = require('../../logger')(module);
 
 logger.info('loading loopback app...');
-require('../server');
+require('../../server');
 
-const config = require('./config');
+const config = require('../config');
 const {
-  addPhotosToTeachers,
   populateUsers,
   populateGroups,
   populateTeachers,
   populateTimetables,
   populateUniversity,
-} = require('./populate');
+} = require('../populate');
 
 logger.info('generating data for DB...');
 
@@ -23,7 +22,6 @@ logger.info('generating data for DB...');
     users,
     groups,
     teachers,
-    teacherPhotos,
     timetables,
     university,
   } = config;
@@ -37,9 +35,6 @@ logger.info('generating data for DB...');
     }
     if (teachers) {
       await populateTeachers();
-    }
-    if (teacherPhotos) {
-      await addPhotosToTeachers();
     }
     if (university) {
       await populateUniversity();
