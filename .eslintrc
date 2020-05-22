@@ -2,7 +2,8 @@
   "extends": ["airbnb-base"],
   "plugins": ["filenames", "json-format"],
   "env": {
-    "node": true
+    "node": true,
+    "jest": true
   },
   "settings": {
     "json/sort-package-json": "pro",

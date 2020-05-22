@@ -9,7 +9,8 @@
     "populate-db": "node server/populate_db/controllers/main",
     "populate-db:teacher-photos": "node server/populate_db/controllers/teacher_photos",
     "start": "node .",
-    "start:dev": "nodemon ."
+    "start:dev": "nodemon .",
+    "test:server": "jest --config test/server/jest.config.js --runInBand --forceExit"
   },
   "husky": {
     "hooks": {
@@ -49,7 +50,9 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-json-format": "^2.0.1",
     "husky": "^4.2.5",
-    "nodemon": "^2.0.3"
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.3",
+    "supertest": "^4.0.2"
   },
   "engines": {
     "node": ">=6"
