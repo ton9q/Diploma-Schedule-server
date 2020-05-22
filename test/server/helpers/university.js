@@ -29,6 +29,51 @@ const createUniversity = async (fields = {}, { createdBy } = {}) => {
   return university;
 };
 
+const createUniversityDataByGroupsData = groupsData => {
+  const facultiesData = groupsData.map(({ faculty, specialty, numberSemesters }) => {
+    return {
+      faculty,
+      specialty,
+      numberSemesters,
+    };
+  });
+
+  const universityFacultiesData = [];
+  facultiesData.forEach(({ faculty, specialty, numberSemesters }) => {
+    const facultyIndex = universityFacultiesData.findIndex(({ name }) => name === faculty);
+
+    if (facultyIndex === -1) {
+      universityFacultiesData.push({
+        name: faculty,
+        specialties: [{
+          name: specialty,
+          numberSemesters,
+        }],
+      });
+
+      return;
+    }
+
+    const facultySpecialties = universityFacultiesData[facultyIndex].specialties;
+    const specialtyIndex = facultySpecialties.findIndex(({ name }) => name === specialty);
+
+    if (specialtyIndex !== -1) {
+      return;
+    }
+
+    facultySpecialties.push({
+      name: specialty,
+      numberSemesters,
+    });
+  });
+
+  return {
+    faculties: universityFacultiesData,
+  };
+};
+
+
 module.exports = {
   createUniversity,
+  createUniversityDataByGroupsData,
 };
