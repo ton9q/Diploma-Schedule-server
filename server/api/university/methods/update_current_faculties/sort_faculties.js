@@ -4,7 +4,12 @@ module.exports = async context => {
   const { faculties } = context.args;
 
   const sortedFaculties = sortBy(faculties, 'name');
-  sortedFaculties.forEach(({ specialties }) => sortBy(specialties, 'name'));
+  const sortedFacultiesWithSpecialties = sortedFaculties.map(sortedFaculty => {
+    return {
+      ...sortedFaculty,
+      specialties: sortBy(sortedFaculty.specialties, 'name'),
+    };
+  });
 
-  context.args.faculties = sortedFaculties;
+  context.args.faculties = sortedFacultiesWithSpecialties;
 };
