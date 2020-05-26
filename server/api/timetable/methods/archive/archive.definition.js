@@ -17,5 +17,5 @@ module.exports = {
     type: 'object',
     root: true,
   },
-  description: 'Move the opportunity to an archive',
+  description: 'Move the timetable to an archive',
 };

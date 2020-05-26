@@ -8,7 +8,7 @@ const { createUniversityDataByGroupsData } = require('../../../../helpers/univer
 const { destroyAll } = require('../../../../utils/models');
 const validCases = require('./get_active_valid_cases');
 
-describe('API > Opportunities > getActive', () => {
+describe('API > Groups > getActive', () => {
   const { user: User, Group, University } = app.models;
   const agent = request.agent(app);
   const url = '/api/Groups/active';
