@@ -1,6 +1,5 @@
 module.exports = [{
   description: 'when no param is set',
-  assertion: 'it returns all groups',
   searchParams: {},
   groups: [{}, {}, {}],
   expectedIndexes: [0, 1, 2],
