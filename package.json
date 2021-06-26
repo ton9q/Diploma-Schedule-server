@@ -29,7 +29,7 @@
     "form-data": "^3.0.0",
     "helmet": "^3.10.0",
     "http-errors": "^1.7.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "loopback": "^3.22.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.2.0",
